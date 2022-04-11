@@ -50,7 +50,7 @@ export default function Coin(counterProps: CounterProps) {
   }
 
   return (
-    <Layout title={coin?.market ?? 'Coin'}>
+    <Layout title={coin?.trade_price ? `${Number(coin?.trade_price).toLocaleString(undefined, { maximumFractionDigits: 20 })} ${marketTradeWhat}/${marketTradeBy}` : 'Coin'}>
       <h1>Coin</h1>
       <Counter
         {...counterProps}
