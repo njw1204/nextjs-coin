@@ -27,7 +27,7 @@ export default function Coins({ coins, counter, dispatchCounter }: InferGetServe
 }
 
 export const getServerSideProps: GetServerSideProps<ServerSideProps> = async (context) => {
-  const coins = await (await fetch(`${process.env.URL}/api/markets`)).json();
+  const coins = await (await fetch('https://api.upbit.com/v1/market/all')).json();
 
   return {
     props: {
