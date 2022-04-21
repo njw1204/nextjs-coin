@@ -4,6 +4,10 @@ export default function Counter({ name, counter, dispatchCounter }: CounterProps
   return (
     <>
       <div>
+        <div>
+          <img src={`/army.png?${Math.random().toString(16)}`} alt="army" />
+        </div>
+        <br />
         <span>
           <strong>{name ?? 'Count'}: </strong>
           <span className="count-view">{counter}</span>

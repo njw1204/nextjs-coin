@@ -17,6 +17,14 @@ const nextConfig = {
   async rewrites() {
     return [
       {
+        source: '/army.png',
+        destination: '/api/army',
+      },
+      {
+        source: '/army.txt',
+        destination: '/api/army/txt',
+      },
+      {
         source: '/naver',
         destination: 'https://www.naver.com/',
       },
